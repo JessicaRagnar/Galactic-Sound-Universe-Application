@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= pageTitle %> - <%= companyName %></title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <!-- Header content goes here -->
+        <div class="logo-container">
+            <img src="/images/layout/logo.png" alt="Galactic Sound Universe Logo">
+            <h1><%= companyName %></h1>
+        </div>
+
+        <div class="primary-menu">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/artists">Artists</a></li>
+                <li><a href="/genres">Genres</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/login"><span class="material-symbols-outlined">account_circle</span></a></li>
+            </ul>
+        </nav>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button type="submit">Search</button>
+        </div>
+       
+    </header>

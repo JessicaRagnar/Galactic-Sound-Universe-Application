@@ -1,0 +1,27 @@
+<%- include('partials/header', { pageTitle: 'Artists', currentYear: new Date().getFullYear() }) %>
+
+<main class="artists-main">
+    <div class="artists-container">
+        <h2>Our Artists</h2>
+        <p class="galactic-text">Immerse yourself in the talents of our extraordinary artists, each a unique star in our musical galaxy. From soulful ballads to electrifying beats, our diverse lineup promises a journey through the vast realms of sound.</p>
+
+        <ul id="artist-list" class="horizontal-list"></ul>
+        <!-- An empty unordered list (ul) with the id 'artist-list' will be populated with artists dynamically using JavaScript. The class 'horizontal-list' indicates a horizontal display. -->
+    </div>
+
+    <div class="artist-details-box">
+        <div id="artist-details"></div>
+        <!-- Artist details section: This div will be dynamically updated with detailed information about the selected artist when an artist is clicked. -->
+        
+        <div id="album-list"></div>
+        <!-- An empty unordered list (ul) with the id 'album-list' will be populated with albums dynamically using JavaScript when an artist is clicked. The class 'horizontal-list' indicates a horizontal display. -->
+
+        <div id="album-details"></div>
+        <!-- Album details section: This div will be dynamically updated with details about the selected album, including songs, when an album is clicked. -->
+    </div>
+</main>
+
+<%- include('partials/footer', { currentYear: new Date().getFullYear(), companyName: companyName }) %>
+
+<!-- Javascript file for artists -->
+<script type="text/javascript" src="/js/artists.js"></script>

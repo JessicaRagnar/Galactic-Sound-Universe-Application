@@ -1,0 +1,3 @@
+# Ignorera en specifik mapp
+# Node.js
+node_modules/

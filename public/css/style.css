@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+/* CSS RESET BY Andy Bell */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+  margin: 0;
+  padding: 0;
+}
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font: inherit;
+}
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 10;
+}
+/* Style the scrollbar */
+::-webkit-scrollbar {
+  width: 14px; 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #000; 
+}
+::-webkit-scrollbar-thumb {
+  background: #333; 
+}
+::-webkit-scrollbar-track {
+  background: var(--clr--hotpink) 
+}
+:root {
+  --clr--white: hsl(0, 0%, 100%);
+  --clr--purple: hsl(270, 71%, 20%);
+  --clr--hotpink: hsl(310, 85%, 40%);
+  --clr--darkblue: hsl(210, 19%, 13%);
+
+  --ff--primary: 'Major Mono Display', monospace;
+  --ff--navigation: 'Silkscreen', sans-serif;
+  --ff--secondary: 'Outfit', sans-serif;
+  --fs--bold: 2rem; /* 32px */
+  --fs--regular: 1rem; /* 16px */
+  --fs--navigation: 1rem; /* 16px */
+  --fs--small: 0.5rem; /* 8px */
+    
+  --fw--bold: 700;
+  --fw--regular: 400;
+}
+body {
+  font-family: var(--ff--secondary);
+  font-weight: var(--fw--regular);
+  background-color: var(--clr--darkblue);
+  padding-bottom: 80px;
+}
+/* HEADER */
+header {
+  background: linear-gradient(135deg, #480048, #c04848, #480048);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  width: 395px;
+  background-color: var(--clr--darkblue);
+}
+.logo-container img {
+  width: 175px;
+  margin-right: 10px;
+}
+/* HEADER-TEXT */
+h1 {
+  font-family: var(--ff--primary);
+  font-size: var(--fs--bold);
+  font-weight: var(--fw--bold);
+  color: var(--clr--hotpink);
+}
+/* NAVIGATION */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+nav li {
+  margin-right: 40px;
+}
+nav a {
+  position: relative;
+  color: var(--clr--darkblue);
+  text-decoration: none;
+  font-family: var(--ff--navigation);
+  font-size: var(--fs--navigation);
+  font-weight: var(--fw--regular);
+}
+nav a:hover {
+  color:var(--clr--purple);
+  opacity: 0.4;
+  transition: width 0.4s ease-in-out;
+}
+nav a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--clr--darkblue);
+  transition: width 0.4s ease-in-out;
+}
+nav a:hover::before {
+  width: 100%;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 100,
+  'wght' 400,
+  'GRAD' 200,
+  'opsz' 24;
+  color: var(--clr--darkblue);
+}
+/* SEARCH-BAR */
+.search-bar {
+  align-self: flex-start;
+}
+.search-bar input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+}
+.search-bar button {
+  padding: 10px;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  background-color: var(--clr--purple);
+  color: var(--clr--white);
+  cursor: pointer;
+}
+/* MAIN */
+main {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: var(--clr--white);
+  border-radius: 20px;
+  margin-bottom: 40px;
+  opacity: 0.9;
+  flex-wrap: nowrap;
+}
+.main-box {
+  flex: 2;
+}
+.aside {
+  flex: 1;
+}
+/* ARTISTS */
+.artists-main {
+  display: flex;
+  flex-direction: column;
+}
+.artists-container,
+.artist-details-box {
+  margin: 0 10px;
+  box-sizing: border-box;
+}
+.horizontal-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  flex-wrap: wrap; 
+}
+.horizontal-list li {
+  margin-right: 20px;
+  margin-bottom: 40px;
+  width: 200px;
+  box-sizing: border-box;
+}
+.artist-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.artist-item img {
+  max-width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+}
+.artist-name {
+  font-size: var(--fs--regular);
+  font-weight: var(--fw--regular);
+  color: var(--clr--darkblue);
+  background: linear-gradient(45deg, #c04848, #849ED5);
+  text-align: center;
+}
+#artist-details {
+  display: flex;
+  align-items: top;
+  max-width: 1200px;
+}
+#artist-details img {
+  max-width: 50%;
+  margin-right: 20px;
+}
+/* TEXT */
+h2 {
+  font-family: var(--ff--primary);
+  font-size: var(--fs--bold);
+  font-weight: var(--fw--bold);
+  color: var(--clr--hotpink);
+  margin-bottom: 20px;
+}
+h3 {
+  font-family: var(--ff--navigation);
+  font-size: var(--fs--regular);
+  font-weight: var(--fw--regular);
+  color: var(--clr--hotpink);
+  margin-bottom: 10px;
+}
+.galactic-text {
+  font-family: var(--ff--secondary);
+  font-size: var(--fs--regular);
+  font-weight: var(--fw--regular);
+  background: linear-gradient(45deg, #c04848, #849ED5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+h2 {
+  font-family: var(--ff--primary);
+  font-size: var(--fs--bold);
+  font-weight: var(--fw--bold);
+  color: var(--clr--hotpink);
+  margin-bottom: 20px;
+}
+.artists-list {
+  list-style: url('/images/layout/rocket_launch.png');
+  background: linear-gradient(45deg, #c04848, #849ED5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+/* FOOTER */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(135deg, #480048, #c04848, #480048);
+  font-family: var(--ff--navigation);
+  font-size: var(--fs--small);
+  color: var(--clr--darkblue);
+  text-align: center;
+  padding: 10px;
+}
+/* MUSICPLAYER */
+#musicPlayer {
+  background: var(--clr--darkblue);
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: var(--clr--white);
+}
+#artistImage {
+  max-width: 80px;
+  max-height: 80px;
+  border-radius: 50%;
+}
+#songInfo {
+  text-align: left;
+}
+/* Styles for copyright text */
+.footer_copyright {
+  margin-top: 10px;
+}

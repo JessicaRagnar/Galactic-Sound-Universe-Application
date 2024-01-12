@@ -1,0 +1,23 @@
+<footer>
+  <!-- MusicPlayer --> 
+  <div id="musicPlayer">
+        <img id="artistImage" src="" alt="Artist Image">
+        <div id="songInfo">
+            <p id="artistName"></p>
+            <p id="songName"></p>
+        </div>
+        <audio id="audioPlayer" controls>
+            <source src="your-audio-file.mp3" type="audio/mp3">
+            Your browser does not support the audio tag.
+        </audio>
+    </div>
+  
+    <!-- Footer content goes here -->
+    <div class="footer_copyright">
+      <p>&copy; <%= currentYear %> <%= companyName %>. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Javascript file for musicplayer -->
+  <script type="text/javascript" src="/js/musicplayer.js"></script>
+  
