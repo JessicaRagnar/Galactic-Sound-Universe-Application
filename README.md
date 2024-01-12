@@ -61,12 +61,12 @@ Genres are created, and artists are associated with specific genres and record l
 <br><br>
 Reflektioner:<br>
 Under det här projekt fick jag utforska Javascript och EJS för att skapa Galactic Sound Universe, en webbapplikation som utforskar musikvärlden genom genrer, artister och album. Trots utmaningar med tidsbegränsningar på grund av förkylning blev det en värdefull inlärningsupplevelse.
-<br><br>
+<br>
 Javascript och EJS:<br>
 Arbetet med Javascript och EJS öppnade upp nya möjligheter för att skapa dynamiska användargränssnitt och förbättrade min förmåga att hantera frontend-interaktioner.<br>
-<br><br>
+<br>
 Databaser och modeller:<br>
 Att skapa och hantera modeller för data såsom genrer, artister och album gav mig insikter i att organisera och strukturera information i en relationsbaserad databas.<br>
-<br><br>
+<br>
 Frontend och Backend integration:<br>
 Integreringen mellan frontend och backend med hjälp av Express.js ökade min förståelse för hur olika delar av en webbapplikation samverkar.<br>
